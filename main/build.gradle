@@ -1,0 +1,36 @@
+
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'eclipse-wtp'
+
+
+
+   repositories {
+        mavenLocal()
+        mavenCentral()
+
+  }
+
+
+
+
+
+    dependencies {
+
+		    compile group: 'org.apache.kafka', name: 'kafka_2.12', version: '0.10.2.0'
+
+    }
+
+
+  task wrapper(type: Wrapper) {
+     gradleVersion = '2.8'
+  }
+
+
+
+
+
+
+
+
+
