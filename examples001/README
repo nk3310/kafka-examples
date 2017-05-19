@@ -1,0 +1,7 @@
+This directory contains examples of client code that uses kafka.
+
+To run the demo: 
+
+   1. Start Zookeeper and the Kafka server
+   2. For unlimited async-producer-consumer run, `run run.bat`
+
