@@ -1,0 +1,44 @@
+
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'eclipse-wtp'
+}
+
+subprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+    }
+
+    dependencies { 
+       
+        testCompile group: 'junit', name: 'junit', version: '4.8.2'
+        
+    }
+}
+
+task wrapper(type: Wrapper) {
+     gradleVersion = '2.8'
+}
+
+project(':examples001') {
+
+    dependencies {
+
+		    compile group: 'org.apache.kafka', name: 'kafka_2.12', version: '0.10.2.0'
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
